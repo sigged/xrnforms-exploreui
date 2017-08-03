@@ -3,9 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XrnCourse.ExploreUI"
              x:Class="XrnCourse.ExploreUI.MainPage">
-
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS">0, 20, 0, 0</On>
+            <On Platform="Android">0</On>
+            <On Platform="Windows">0</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout x:Name="myLayout" HorizontalOptions="FillAndExpand" Spacing="0">
+        <Label TextColor="#000000">
+            <Label.BackgroundColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <On Platform="iOS">Beige</On>
+                    <On Platform="Android">#ffcccc</On>
+                    <On Platform="Windows">#efefef</On>
+                </OnPlatform>
+            </Label.BackgroundColor>
+            <Label.Text>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS">You're running iOS</On>
+                    <On Platform="Android">You're running 'Droid</On>
+                    <On Platform="Windows">You're running UWP</On>
+                </OnPlatform>
+            </Label.Text>
+        </Label>
+        <Label TextColor="#000000" BackgroundColor="Bisque">
+            <Label.Text>
+        <OnIdiom x:TypeArguments="x:String"
+                    Phone="On a phone"
+                    Tablet="On a tablet"
+                    Desktop="On a desktop">
+        </OnIdiom>
+            </Label.Text>
+        </Label>
+    </StackLayout>
 </ContentPage>
