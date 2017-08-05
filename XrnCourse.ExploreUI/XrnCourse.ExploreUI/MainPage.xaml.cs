@@ -12,29 +12,22 @@ namespace XrnCourse.ExploreUI
         public MainPage()
         {
             InitializeComponent();
+            
+        }
 
+        private async void btnPageTypes_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new PageTypesPage()));
+        }
 
-            Label label = new Label();
-            var pfText = new OnPlatform<string>();
-            pfText.Platforms.Add(new On { Platform = new List<string> { "iOS" }, Value = "Apples", });
-            pfText.Platforms.Add(new On { Platform = new List<string> { "Android" }, Value = "Bots" });
-            pfText.Platforms.Add(new On { Platform = new List<string> { "Windows" }, Value = "Windows" });
-            label.Text = pfText;
-            myLayout.Children.Add(label);
+        private async void btnLayouts_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new LayoutTypesPage()));
+        }
 
-            switch(Device.RuntimePlatform)
-            {
-                case Device.iOS:
-                    label.BackgroundColor = Color.LightBlue;
-                    break;
-                case Device.Android:
-                    label.BackgroundColor = Color.LightGreen;
-                    break;
-                default: //windows, winphone and all others
-                    label.BackgroundColor = Color.Wheat;
-                    break;
-            }
-
+        private async void btnViews_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new ViewTypesPage()));
         }
     }
 }

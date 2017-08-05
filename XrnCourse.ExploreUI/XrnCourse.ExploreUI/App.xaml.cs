@@ -10,7 +10,7 @@ namespace XrnCourse.ExploreUI
         {
             InitializeComponent();
 
-            MainPage = new XrnCourse.ExploreUI.MainPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

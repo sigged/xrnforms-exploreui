@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XrnCourse.ExploreUI.PageTypesPage"
+             Title="Page Types"
+             Style="{StaticResource ContentPageStyle}">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" Spacing="10">
+            <Label Style="{DynamicResource CustomTitleStyle}">Explore Page Types</Label>
+            <Label Style="{DynamicResource CaptionStyle}" Text="...and how to navigate them!"></Label>
+            <Button Style="{StaticResource DefaultButtonStyle}" Text="NavigationPage" Clicked="btnNavigationPage_Clicked"></Button>
+            <Button Style="{StaticResource DefaultButtonStyle}" Text="TabbedPage" Clicked="btnTabbedPage_Clicked"></Button>
+            <Button Style="{StaticResource DefaultButtonStyle}" Text="MasterDetailPage" Clicked="btnMasterDetailPage_Clicked"></Button>
+            <Button Style="{StaticResource CancelButtonStyle}" Text=" &#12298; Go Back " Clicked="btnGoBack_Clicked">
+                <Button.Margin>
+                    <Thickness>
+                        <Thickness.Top>50</Thickness.Top>
+                    </Thickness>
+                </Button.Margin>
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

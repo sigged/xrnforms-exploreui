@@ -2,39 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XrnCourse.ExploreUI"
-             x:Class="XrnCourse.ExploreUI.MainPage">
-    <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness">
-            <On Platform="iOS">0, 20, 0, 0</On>
-            <On Platform="Android">0</On>
-            <On Platform="Windows">0</On>
-        </OnPlatform>
-    </ContentPage.Padding>
-    <StackLayout x:Name="myLayout" HorizontalOptions="FillAndExpand" Spacing="0">
-        <Label TextColor="#000000">
-            <Label.BackgroundColor>
-                <OnPlatform x:TypeArguments="Color">
-                    <On Platform="iOS">Beige</On>
-                    <On Platform="Android">#ffcccc</On>
-                    <On Platform="Windows">#efefef</On>
-                </OnPlatform>
-            </Label.BackgroundColor>
-            <Label.Text>
-                <OnPlatform x:TypeArguments="x:String">
-                    <On Platform="iOS">You're running iOS</On>
-                    <On Platform="Android">You're running 'Droid</On>
-                    <On Platform="Windows">You're running UWP</On>
-                </OnPlatform>
-            </Label.Text>
-        </Label>
-        <Label TextColor="#000000" BackgroundColor="Bisque">
-            <Label.Text>
-        <OnIdiom x:TypeArguments="x:String"
-                    Phone="On a phone"
-                    Tablet="On a tablet"
-                    Desktop="On a desktop">
-        </OnIdiom>
-            </Label.Text>
-        </Label>
-    </StackLayout>
+             x:Class="XrnCourse.ExploreUI.MainPage"
+             Style="{StaticResource PlatformPaddedContentPageStyle}">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" Spacing="10">
+            <Label Style="{DynamicResource CustomTitleStyle}">Explore UI</Label>
+            <Label Style="{DynamicResource CaptionStyle}" Text="...and learn kick-ass XAML along the way"></Label>
+            <Button Style="{StaticResource DefaultButtonStyle}" Text="Page Types" Clicked="btnPageTypes_Clicked"></Button>
+            <Button Style="{StaticResource DefaultButtonStyle}" Text="Layouts" Clicked="btnLayouts_Clicked"></Button>
+            <Button Style="{StaticResource DefaultButtonStyle}" Text="Views / Widgets" Clicked="btnViews_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

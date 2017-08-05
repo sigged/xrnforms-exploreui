@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XrnCourse.ExploreUI.LayoutTypesPage"             
+             Title="Layout Types"
+             Style="{StaticResource ContentPageStyle}">
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout HorizontalOptions="FillAndExpand" Spacing="10">
+                <Label Style="{DynamicResource CustomTitleStyle}">Explore Layout Types</Label>
+                <Label Style="{DynamicResource CaptionStyle}" Text="...and how to populate them!"></Label>
+                <Button Style="{StaticResource DefaultButtonStyle}" Text="StackLayout" Clicked="btnStackLayout_Clicked"></Button>
+                <Button Style="{StaticResource DefaultButtonStyle}" Text="GridLayout" Clicked="btnGridLayout_Clicked"></Button>
+                <Button Style="{StaticResource DefaultButtonStyle}" Text="AbsoluteLayout" Clicked="btnAbsoluteLayout_Clicked"></Button>
+                <Button Style="{StaticResource DefaultButtonStyle}" Text="RelativeLayout" Clicked="btnRelativeLayout_Clicked"></Button>
+                <Button Style="{StaticResource CancelButtonStyle}" Text=" &#12298; Go Back " Clicked="btnGoBack_Clicked">
+                    <Button.Margin>
+                        <Thickness>
+                            <Thickness.Top>50</Thickness.Top>
+                        </Thickness>
+                    </Button.Margin>
+                </Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
